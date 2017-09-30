@@ -1,6 +1,27 @@
-
 {
-    "name": "hexo-jupyter-notebook",
-    "version": "0.0.1",
-    "main": "index"
+  "name": "hexo-jupyter-notebook",
+  "version": "0.0.1",
+  "main": "index",
+  "description": "Use jupyter notebook like *.ipynb in Hexo.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiliux/hexo-jupyter-notebook.git"
+  },
+  "keywords": [
+    "hexo",
+    "jupyter",
+    "notebook"
+  ],
+  "author": "qiliux <happy_0426@126.com> (blog.qiliuxiansheng.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qiliux/hexo-jupyter-notebook/issues"
+  },
+  "homepage": "https://github.com/qiliux/hexo-jupyter-notebook#readme",
+  "directories": {
+    "lib": "lib"
   }
+}

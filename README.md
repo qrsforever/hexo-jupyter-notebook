@@ -41,10 +41,10 @@ eg : (i use next theme , so the jquery is in lib/jquery/index.js)
 ```
 
 ## future
-Maybe it's a little diffcult to use.. But it's work. You can see example at [my blog](blog.qiliuxiansheng.com)
+Maybe it's a little diffcult to use.. But it's work. You can see example at [my blog](http://blog.qiliuxiansheng.com)
 
 1. The jupyter notebook width is fixed for general usage. Maybe it should be auto-responsive.
-2. This assums that you use 
+2. This assums that you must use post_asset_folder. I think it's a good choice for you to manage your blog and notebook files. For linux and mac user, you are encouraged to use `ln -s ` command to link you jupyter notebook file to blog. 
 
 ## License
 
