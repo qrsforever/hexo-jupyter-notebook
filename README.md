@@ -1,4 +1,4 @@
-# hexo-jupyter
+# hexo-jupyter-notebook
 
 Use jupyter notebook like *.ipynb in Hexo.
 
@@ -6,7 +6,7 @@ Use jupyter notebook like *.ipynb in Hexo.
 
 
 ``` bash
-$ npm install hexo-jupyter --save
+$ npm install hexo-jupyter-notebook --save
 ```
 
 ## Usage
@@ -43,7 +43,8 @@ eg : (i use next theme , so the jquery is in lib/jquery/index.js)
 ## future
 Maybe it's a little diffcult to use.. But it's work. You can see example at [my blog](blog.qiliuxiansheng.com)
 
-1. The jupyter notebook width is fixed for general usage. 
+1. The jupyter notebook width is fixed for general usage. Maybe it should be auto-responsive.
+2. This assums that you use 
 
 ## License
 
