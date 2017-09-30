@@ -27,7 +27,7 @@ pip install nbconvert
 
 1. Enable post asset by adding this line in your `_config.yml`: `post_asset_folder: true`
 2. put your jupyter file in post asset directory. You can use `ln -s` , `cp source direction` and etc. 
-3. Make sure load jquery before you use `asset_jupyter`
+3. Make sure load jquery 2 (jquery 3 will error. I will fix at soon.) before you use `asset_jupyter`
 
 ``` html
 <script text='text/javascript' src='/path/to/jquery.js'></script>
@@ -45,6 +45,7 @@ Maybe it's a little diffcult to use.. But it's work. You can see example at [my 
 
 1. The jupyter notebook width is fixed for general usage. Maybe it should be auto-responsive.
 2. This assums that you must use post_asset_folder. I think it's a good choice for you to manage your blog and notebook files. For linux and mac user, you are encouraged to use `ln -s ` command to link you jupyter notebook file to blog. 
+
 
 ## License
 

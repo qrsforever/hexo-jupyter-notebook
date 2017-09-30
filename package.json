@@ -1,6 +1,6 @@
 {
   "name": "hexo-jupyter-notebook",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index",
   "description": "Use jupyter notebook like *.ipynb in Hexo.",
   "scripts": {
@@ -23,5 +23,9 @@
   "homepage": "https://github.com/qiliux/hexo-jupyter-notebook#readme",
   "directories": {
     "lib": "lib"
+  },
+  "dependencies":{
+    "co-exec": "^1.1.0",
+    "co-fs": "^1.2.0"
   }
 }
