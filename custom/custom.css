@@ -1,0 +1,23 @@
+/* config_dir: custom/custom.css, see nbconvert/preprocessors/csshtmlheader.py */
+
+/* css by did id */
+
+div#notebook-container {
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+/* css by did class*/
+
+div.border-box-sizing {
+    min-width:600px;
+    max-width:100%;
+    /* white-space:nowrap; */
+}
+
+/* In[] width */
+div.input_prompt {
+    min-width:8ex;
+}
