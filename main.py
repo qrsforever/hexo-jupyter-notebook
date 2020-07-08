@@ -50,7 +50,6 @@ def main(asset_dir, jupyter_file, inc_height):
 <script>
 $("#ipynb-%d").load( function() {
 var h = $("#ipynb-%d").contents().find("#notebook").height();
-console.log(h)
 document.getElementById('ipynb-%d').height= h + %s;
 })
 </script> 
