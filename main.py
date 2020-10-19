@@ -27,7 +27,7 @@ def main(asset_dir, jupyter_file, inc_height):
     if inc_height == "undefined":
         inc_height = "60"
     num = random.randint(1111, 9999)
-    dn = os.path.dirname(asset_dir)
+    dn = os.path.dirname(os.path.dirname(asset_dir))
     jupyter_file = os.path.join(dn, jupyter_file)
     if not os.path.exists(jupyter_file):
         print("not found: " + jupyter_file)
