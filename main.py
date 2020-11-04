@@ -27,10 +27,12 @@ def main(asset_dir, jupyter_file, inc_height):
     if inc_height == "undefined":
         inc_height = "60"
     num = random.randint(1111, 9999)
-    dn = os.path.dirname(os.path.dirname(asset_dir))
-    jupyter_file = os.path.join(dn, jupyter_file)
-    if not os.path.exists(jupyter_file):
-        print("not found: " + jupyter_file)
+    dn = os.path.dirname(asset_dir)
+    if os.path.exists(dn + ".md"):
+        dn = os.path.dirname(dn)
+        jupyter_file = os.path.join(dn, jupyter_file)
+    else:
+        print("not found: " + os.path.join(asset_dir, jupyter_file))
         return
 
     # lidong mod, jquery only use 2.0.0, other have some problems (TODO, 忘了啥问题,先去掉)
