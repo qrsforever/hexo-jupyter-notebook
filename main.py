@@ -7,6 +7,7 @@ import sys
 import re
 from nbconvert import HTMLExporter
 
+
 def main(asset_dir, jupyter_file, inc_height):
     """
     convert jupyter file to html
@@ -16,12 +17,6 @@ def main(asset_dir, jupyter_file, inc_height):
     html_exporter = HTMLExporter(template_name='classic')
     html_exporter.require_js_url = '/js/require.min.js'
     html_exporter.jquery_url = '/js/jquery.min.js'
-
-    # html_exporter.template_file = 'full
-    # lidong: nbconvert/templates/html/full.tpl
-    # iframe js
-    # <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-    # <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
     # lidong add
     import random
@@ -59,11 +54,7 @@ document.getElementById('ipynb-%d').height= h + %s;
 })
 </script> 
     """ % (num, restr.replace("\"", "'"), num, num, num, inc_height)
-    # print(sys.version)
-    # template = '2341'
     print(re.sub(r'<a.*?\/a>', '', template))
 
 
 main(sys.argv[1], sys.argv[2], sys.argv[3])
-
-#  document.getElementById('ipynb-%d').height=$("#ipynb-%d").contents().find("#notebook").height()+100;
