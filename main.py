@@ -24,13 +24,14 @@ def main(asset_dir, jupyter_file, inc_height):
     if inc_height == "undefined":
         inc_height = "60"
     num = random.randint(1111, 9999)
-    dn = os.path.dirname(asset_dir)
-    if os.path.exists(dn + ".md"):
-        dn = os.path.dirname(dn)
-        jupyter_file = os.path.join(dn, jupyter_file)
-    else:
-        print("not found: " + os.path.join(asset_dir, jupyter_file))
-        return
+    if not os.path.exists(jupyter_file):
+        dn = os.path.dirname(asset_dir)
+        if os.path.exists(dn + ".md"):
+            dn = os.path.dirname(dn)
+            jupyter_file = os.path.join(dn, jupyter_file)
+        else:
+            print("not found: " + os.path.join(asset_dir, jupyter_file))
+            return
 
     # lidong mod, jquery only use 2.0.0, other have some problems (TODO, 忘了啥问题,先去掉)
     # <script src="//code.jquery.com/jquery-2.0.0.js"></script>
@@ -54,7 +55,11 @@ document.getElementById('ipynb-%d').height= h + %s;
 })
 </script> 
     """ % (num, restr.replace("\"", "'"), num, num, num, inc_height)
-    print(re.sub(r'<a.*?\/a>', '', template))
+    # print(re.sub(r'<a.*?\/a>', '', template)) # why
+    print(template) # why
 
 
-main(sys.argv[1], sys.argv[2], sys.argv[3])
+if len(sys.argv) == 3:
+    main(sys.argv[1], sys.argv[2], sys.argv[3])
+else:
+    main('/tmp', sys.argv[1], 'undefined')
