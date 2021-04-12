@@ -59,7 +59,7 @@ document.getElementById('ipynb-%d').height= h + %s;
     print(template) # why
 
 
-if len(sys.argv) == 3:
+if len(sys.argv) == 4:
     main(sys.argv[1], sys.argv[2], sys.argv[3])
 else:
-    main('/tmp', sys.argv[1], 'undefined')
+    main('/tmp', sys.argv[2], 'undefined')
